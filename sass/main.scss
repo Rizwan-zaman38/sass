@@ -1,0 +1,57 @@
+@import "var" ;
+@import "mixin" ;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 60%;
+}
+
+// $bg-color : rgb(247, 167, 96);
+
+// @mixin flexprop{
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     place-items: center;
+// }
+
+// @mixin commoncode($part1,$part2){
+//     color: green;
+//     font-size: 5rem + 5rem;    //operator 
+//     letter-spacing: $part1;
+//     font-weight: $part2;
+// }
+
+//operator 
+//variables
+//nesting
+//mixin
+//parameters
+//partials
+
+.main-header{
+    @include flexprop();
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg-color;   //variables
+
+    h1{
+        @include commoncode(0.8rem,larger);
+        &:hover{
+            color: black;
+        }
+    }
+    
+    p{
+        @include commoncode(0.3rem,lighter);
+        &:hover{
+            color: black;
+        }
+    }    
+    
+}
+
